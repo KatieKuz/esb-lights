@@ -21,6 +21,20 @@ else:
     color = "Signature White"
     reason = "The Empire State Building's signature look"
 
+def ordinal(n):
+    if 11 <= n % 100 <= 13:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+result = {
+    "date": today.isoformat(),
+    "date_display": today.strftime("%A %B ") + ordinal(today.day),
+    "color": color,
+    "reason": reason,
+}
+
 result = {"date": today.isoformat(), "color": color, "reason": reason}
 
 with open("esb_tonight.json", "w") as f:
