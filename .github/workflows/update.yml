@@ -2,7 +2,7 @@ name: Update ESB lighting data
 
 on:
   schedule:
-    - cron: "15 09 * * *"   # daily at 09:15 UTC = 9:15am New York (summer)
+    - cron: "0 11 * * *"   
   workflow_dispatch:         # adds a manual "Run" button for testing
 
 permissions:
