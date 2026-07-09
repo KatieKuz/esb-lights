@@ -35,8 +35,6 @@ result = {
     "reason": reason,
 }
 
-result = {"date": today.isoformat(), "color": color, "reason": reason}
-
 with open("esb_tonight.json", "w") as f:
     json.dump(result, f, indent=2)
 
